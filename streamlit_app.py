@@ -6,8 +6,6 @@ from google.oauth2.service_account import Credentials
 import time
 import pickle
 from pathlib import Path
-import streamlit_authenticator as stauth
-from dotenv import load_dotenv
 import os
 import json
 from datetime import date
