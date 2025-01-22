@@ -15,25 +15,6 @@ import calendar
 from datetime import datetime
 
 
-load_dotenv()
-
-VALID_USER = os.getenv("VALID_USER")
-if VALID_USER is None:
-    st.error("Error: VALID_USER not found in .env")
-    st.stop()
-
-VALID_USER = json.loads(VALID_USER)
-
-def authenticate_user(username, password):
-    return VALID_USER.get(username) == password
-
-
-if "logged_in" not in st.session_state:
-    st.session_state.logged_in = False
-
-if "update_feature" not in st.session_state:
-    st.session_state.update_feature = None
-
 #Menu Horizontal 
 selected = option_menu(
     menu_title="Main menu",
